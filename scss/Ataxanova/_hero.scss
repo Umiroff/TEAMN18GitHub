@@ -1,0 +1,106 @@
+section {
+    width: 100%;
+    background: var(--gray-6, #fafafa);
+  }
+  
+  .container {
+    .hero {
+      padding-top: 40px;
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        color: #000;
+        margin-top: 64px;
+      }
+      .panel {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .panel-text {
+          form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            input {
+              width: 300px;
+              padding: 15px 20px;
+              background: var(--grey-7, #f1f1f1);
+              border: 0;
+              outline: none;
+              &:nth-child(4) {
+                display: none;
+              }
+            }
+            label {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+            }
+            button {
+              padding: 10px 30px;
+              border: 0;
+              outline: none;
+              background: var(--yellow, #ffc000);
+              transition: all 0.4s ease;
+              &:hover {
+                transform: scaleX(110%);
+                background: var(--yellow, #ffd665);
+              }
+              &:active {
+                background-color: #ab8514;
+                transform: scaleY(50%);
+              }
+              p {
+                display: block;
+                &:nth-child(2) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .container {
+      max-width: 375px;
+      margin: 0 auto;
+      .hero {
+        h1 {
+          text-align: start;
+          margin: 20px 0 0 50px;
+          font-size: 30px;
+          font-family: sans-serif;
+        }
+        .panel {
+          .panel-img {
+            display: none;
+          }
+          .panel-text {
+            padding: 50px 0;
+            form {
+              input {
+                &:nth-child(4) {
+                  display: block;
+                }
+              }
+              label {
+                display: none;
+              }
+              button {
+                p {
+                  display: none;
+                  &:nth-child(2) {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
